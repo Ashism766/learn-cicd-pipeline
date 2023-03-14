@@ -15,7 +15,7 @@ app.get('/', async(req, res)=>{
 })
 
 app.get('/defame', async(req, res)=>{
-    res.status(200).send({"message":"Shame on you"})
+    res.status(200).send({"message":"Shame on you"+process.env.ASH})
 }) 
 
 module.exports = app;

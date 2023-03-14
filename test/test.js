@@ -19,6 +19,6 @@ describe("POSITIVE TEST ",async()=>{
         
         expect(res.status).to.equal(200)
         expect(res.body).not.to.be.null;
-        expect(res.body.message).to.equal('Shame on you')
+        expect(res.body.message).to.equal('Shame on you'+process.env.ASH)
     })
 })
