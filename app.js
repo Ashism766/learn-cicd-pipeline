@@ -11,7 +11,7 @@ app.listen(1998, async()=>{console.log('app is running on port 1998.....')});
 
 
 app.get('/', async(req, res)=>{
-    res.status(200).send({"message":"Hell3o Wolrd"})
+    res.status(200).send({"message":"Hello Wolrd"})
 })
 
 app.get('/defame', async(req, res)=>{
