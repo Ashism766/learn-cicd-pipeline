@@ -1,3 +1,4 @@
+require('dotenv').config
 const  app = require('../app');
 const supertest = require('supertest')
 const { expect }= require('chai');
@@ -16,9 +17,9 @@ describe("POSITIVE TEST ",async()=>{
 
     it('/defame', async()=>{
         let res = await request.get('/defame');
-        
+        console.log(res.body)
         expect(res.status).to.equal(200)
         expect(res.body).not.to.be.null;
-        expect(res.body.message).to.equal('Shame on you')
+        expect(res.body.message).to.equal('Shame on youASHIS')
     })
 })

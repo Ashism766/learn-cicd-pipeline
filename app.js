@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
 
@@ -15,7 +16,7 @@ app.get('/', async(req, res)=>{
 })
 
 app.get('/defame', async(req, res)=>{
-    res.status(200).send({"message":"Shame on you"})
+    res.status(200).send({"message":"Shame on you"+process.env.ASH})
 }) 
 
 module.exports = app;
